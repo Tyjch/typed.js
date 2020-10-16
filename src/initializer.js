@@ -68,7 +68,8 @@ export default class Initializer {
     self.isPaused = false;
 
     // input strings of text
-    self.strings = self.options.strings.map((s) => s.trim());
+    // PATCH: Disabled automatic trimming of whitespace on input strings
+    self.strings = self.options.strings //.map((s) => s.trim());
 
     // div containing strings
     if (typeof self.options.stringsElement === 'string') {
